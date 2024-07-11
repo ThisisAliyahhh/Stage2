@@ -432,7 +432,9 @@ div.Product h6, div.CartHead h6{
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 30px;
+    padding-bottom: 10px;
     border-bottom: 4px solid hsla(204, 16%, 65%, 1);
+    margin-bottom: 20px;
 }
 
 .Price{
