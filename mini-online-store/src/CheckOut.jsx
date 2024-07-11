@@ -21,11 +21,11 @@ function CheckOut(){
                     <form>
                         <div className="Name">
                             <div>
-                                <label htmlFor="FirstName">First name </label>
+                                <label htmlFor="FirstName">First name <span>*</span></label>
                                 <input type="text" id="FirstName" name="FirstName" required/><br />
                             </div>
                             <div>
-                                <label htmlFor="LastName">Last name </label>
+                                <label htmlFor="LastName">Last name <span>*</span></label>
                                 <input type="text" id="LastName" name="LastName" required/>
                             </div>
                         </div>           
@@ -48,25 +48,25 @@ function CheckOut(){
                 <div className="Order">
                     <h6 className="heading">YOUR ORDER</h6>
                     <div className="Bills">
-                        <p>Product</p>
-                        <p>Subtotal</p>
+                        <p class="head">Product</p>
+                        <p class="head">Subtotal</p>
                     </div>
                     <div className="Bills">
-                        <p>The Golden Age 2 <span>x1</span></p>
-                        <p>&#8358; 4,000</p>
+                        <p className="golden">The Golden Age 2 <span>x1</span></p>
+                        <p className="price">&#8358; 4,000</p>
                     </div>
                     <div className="Bills">
-                        <p>Subtotal</p>
-                        <p>&#8358; 4,000</p>
+                        <p className="sub">Subtotal</p>
+                        <p className="price">&#8358; 4,000</p>
                     </div>
                     <div className="Bills">
-                        <p>Total</p>
-                        <p>&#8358; 6,000</p>
+                        <p className="sub">Total</p>
+                        <p className="price">&#8358; 6,000</p>
                     </div>
                     
-                    <div className="PayStack">
-                        <p>PayStack</p>
-                        <p>Secured by <span>Paystack</span></p>
+                    <div>
+                        <p className="PayStack">PayStack</p>
+                        <p className="Secure"><span className="Secured">Secured by</span> <span className="PayStack">Paystack</span></p>
                     </div>
                     
                     <div className="PaymentMethod">
@@ -77,9 +77,9 @@ function CheckOut(){
                             <li><a href="#"></a><img src={Verve} alt="verve-logo" /></li>
                         </ul>
                     </div>
-                    <p>Make payment using your debit and credit cards</p>
+                    <p className="note">Make payment using your debit and credit cards</p>
                     <Button ButtonName="PROCEED TO CHECK-OUT"/>
-                    <p>Your personal data will be used to process your order,
+                    <p className="Policy">Your personal data will be used to process your order,
                         support your experience throughout this website, and 
                         for other purposes described in our <a href="#">Privacy Policy</a>.</p>
                 </div>

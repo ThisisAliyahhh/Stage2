@@ -7,10 +7,10 @@ function ProductListing(){
         <>
             <Header />
             <div className="background">
-                <div className="greetings">
-                    <h1>WELCOME TO BOOKTIQUE</h1>
-                    <p>Buy your books at an affordable price ,and it will be delivered to you. </p>
-                </div>
+                    <div className="greetings">
+                        <h1>Welcome to <br /> Booktique</h1>
+                        <p>Buy your books at an affordable price,and it will be delivered to you. </p>
+                    </div>
             </div>
             
             
