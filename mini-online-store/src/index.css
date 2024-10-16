@@ -755,6 +755,10 @@ footer .Contact{
         gap: 20px;
     }
 
+    footer.About, footer.Join, footer.Contact{
+        height: 30%;
+    }
+
     footer h4.title{
         font-size: 18px;
     }
