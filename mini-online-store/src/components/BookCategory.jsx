@@ -39,7 +39,7 @@ function BookCategory(){
             </select>
             <div className="books">
                 <h2>FICTION</h2>
-                <div className="fiction">
+                <div className="fiction" id="fiction">
                     <Book src={golden1} title="The Golden Age 1" price="4,000" />
                     <Book src={golden2} title="The Golden Age 2" price="5,000" />
                     <Book src={magic} title="Books of Magic" price="10,000" />
@@ -51,7 +51,7 @@ function BookCategory(){
                 </div>
                     
                 <h2>BUSINESS</h2>
-                <div className="business">
+                <div className="business" id="business">
                     <Book src={habitofsuccess} title="Habit of Success" price="4,000" />
                     <Book src={influence} title="How to win Friends" price="9,000" />
                     <Book src={actlikesuccess} title="Act like a Success" price="6,000" />
@@ -63,7 +63,7 @@ function BookCategory(){
                 </div>
                 
                 <h2>BESTSELLING</h2>
-                <div className="bestselling">
+                <div className="bestselling" id="bestselling">
                     <Book src={thinkandgrow} title="Think and Grow Rich" price="12,000" />
                     <Book src={zerotoone} title="Zero to One" price="12,000" />
                     <Book src={fastlane} title="The Millionaire Fast Lane" price="10,000" />

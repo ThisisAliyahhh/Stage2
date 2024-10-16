@@ -11,11 +11,11 @@
 }
 
 body{
-    background-color: hsla(0, 14%, 95%, 1);
+    background-color: #f4f0f0;
 }
 
 button, input, textarea {
-    border: 1px solid hsla(248, 53%, 58%, 0.5);
+    border: 1px solid #6a5bcd80;
     border-radius: 20px;
     resize: none;
     padding: 5px;
@@ -170,7 +170,7 @@ div.BookOptions{
     flex-direction: column;
 }
 
-select{
+.BookOptions select{
     width: 14%;
     font-family: "Inter", sans-serif;
     font-size: 24px;
@@ -186,6 +186,12 @@ select{
     background-position: right 10px center;
     border-radius: 20px;
     padding: 5px 10px;
+}
+
+.BookOptions option{
+    background-color: #f4f0f0;
+    border: 1px solid #f4f0f0;
+    color: black;
 }
 
 .BookOptions .book{
@@ -718,8 +724,10 @@ footer .Contact{
         width: 100%;
     }
 
-    select{
+    .BookOptions select{
         width: 20%;
+        font-size: 10px;
+        background-position: right 5px center;
     }
 
     .BookOptions .book{
@@ -748,15 +756,15 @@ footer .Contact{
     /* BookCategory and Book component styling ends */
 
     footer{
-        height: 90vh;
+        height: 100vh;
         grid-template-columns: repeat(1, 350px);
         justify-content: space-evenly;
-        padding: 40px 20px;
+        padding: 20px;
         gap: 20px;
     }
 
-    footer.About, footer.Join, footer.Contact{
-        height: 30%;
+    footer .About, footer .Join, footer .Contact{
+        height: 150px;
     }
 
     footer h4.title{
