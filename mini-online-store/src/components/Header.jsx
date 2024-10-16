@@ -13,17 +13,14 @@ function Header(){
             <div className="HeaderLink">
                 <ul>
                     <li className="Home"><a href="/home">Home </a></li>
-                    <li>
+                    <li className="SearchBox">
                         <input type="text" placeholder="Search"/>
                     </li>
                     <li className="CartButton">
-                        <button>
                         <a href="/cart">
                             Cart <img src={Cart} alt="cart-logo" height="15px"/>
                         </a>
-                        </button>
                     </li>
-                    
                 </ul>
             </div>  
     </header>

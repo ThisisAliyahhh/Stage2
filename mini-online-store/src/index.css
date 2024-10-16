@@ -2,27 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 
 body{
     background-color: hsla(0, 14%, 95%, 1);
-    text-decoration: none;
 }
 
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-
-button, input, select, textarea {
+button, input, textarea {
     border: 1px solid hsla(248, 53%, 58%, 0.5);
     border-radius: 20px;
     resize: none;
     padding: 5px;
 }
+
 button{
     background-color: hsl(248, 53%, 58%);
     color: hsl(0, 0%, 100%);
@@ -36,168 +34,216 @@ input::placeholder{
     font-size: 15px;
 }
 
+/* header component styling begins */
+
 header {
+    width: 100%;
+    height: 90px;
     font-family: "Inter", sans-serif;
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    height: 45px;
-    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
 }
 
-
 header div.logo {
+    width: 20%;
+    height: 100%;
     font-family: "Playfair Display", serif;
     display: flex;
     align-items: center;
-    font-size: 24px;
-}
-
-header div.logo span{
-    font-weight: 400;
+    justify-content: left;
     font-size: 30px;
+    font-weight: 400;
 }
 
-
-header div.logo img{
-        height: 40px; 
-        margin: 0;
+header div.HeaderLink{
+    width: 60%;
+    height: 100%;
 }
 
 header div.HeaderLink ul{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-header div.HeaderLink ul li{
-    margin: 0 50px;
+    align-items: center;
     font-family: "Inter", sans-serif;
 }
 
-header div.HeaderLink ul li.Home{
+.HeaderLink li.Home{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLink li.Home a{
     font-size: 20px;
     font-weight: 500;
+    color: black;   
 }
 
-header div.HeaderLink ul li.CartButton{
-    font-size: 18px;
-    font-weight: 500;
+.HeaderLink li.SearchBox{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-header div.HeaderLink ul li input{
-    border: 1px solid hsla(248, 53%, 58%, 0.5);
+.HeaderLink li input{
+    width: 100%;
+    height: 70%;
+    border: 2px solid hsla(248, 53%, 58%, 0.5);
     background-color: hsla(0, 14%, 95%, 1);
     background-image: url("./assets/search.svg");
     background-repeat:  no-repeat;
     background-size: 15px 15px;
     background-position: 85% 50%;
-    padding: 20px;
-    width: 300px;
-    padding: 5px;
+    padding: 15px;
 }
 
-header div.HeaderLink ul li a{
-    color: black;
+.HeaderLink li.CartButton{
+    width: 12%;
+    height: 70%;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6a5bcd;
+    background-color: #6a5bcd;
+    border-radius: 20px;
 }
 
-header div.HeaderLink ul li button{
-    background-color: hsl(248, 53%, 58%);
-    padding: 3px 15px;
+.HeaderLink li.CartButton a{
+    color: #ffffff;
 }
-header div.HeaderLink ul li button a{
-    color: hsl(0, 0%, 100%);
-}
+
+/* header component styling ends  */
+
+/* ProductListing page styling begins  */
 
 div.background{
+    width: 100%;
+    height: 100vh;
     position: relative;
-    background-image: url("./assets/background.png");
+    background-image: linear-gradient(0deg, hsla(248, 53%, 58%, 0.5), hsla(248, 53%, 58%, 0.5)), url("./assets/background.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 653px;
-    margin-bottom: 20px;
-}
-
-div.background::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: hsla(248, 53%, 58%, 0.5);
 }
 
 div.greetings{
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: hsl(0, 0%, 100%);
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-
 }
 
 div.greetings h1{
     font-family: "Playfair Display", serif;
     font-weight: 600;
     font-size: 96px;
-    /* width: 550px; */
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 div.greetings p{
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 24px;
-    right: 500px;
 }
 
+/* ProductListing page styling ends  */
+
+/* BookCategory and Book component styling begins  */
+
 div.BookOptions{
-    padding: 20px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 select{
-    background-color: hsl(248, 53%, 58%);
-    color: hsl(0, 0%, 100%);
+    width: 14%;
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid #6a5bcd;
+    background-color: #6a5bcd;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("./assets/dropdown.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border-radius: 20px;
+    padding: 5px 10px;
 }
 
-div h6{
+.BookOptions .book{
+    width: 100%;
+    height: 400px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.BookOptions div h2{
     font-family: "Playfair Display", serif;
     font-size: 40px;
     font-weight: 500;
     text-align: center;
-    font-weight: 500;
-    justify-content: space-between;
-    margin: 0;
+    margin: 40px 0;
 }
 
-div.book{
-    font-family: "Inter", sans-serif;
+.BookOptions .book Button{
+    width: 100px;
     font-size: 18px;
-    font-weight: 500;
-    padding: 10px;
-    margin: 10px;
-}
-div.book Button{
-    background-color: hsl(248, 53%, 58%);
     color: hsl(0, 0%, 100%);
-    padding: 10px;
+    background-color: #6a5bcd;
+    border: 1px solid #6a5bcd;
+    border-radius: 20px;
+    padding: 5px 0;
 }
 
-div.book img{
-    width: 270px;
-    height: 350px;
+.book .book-img{
+    width: 100%;
+    height: 70%;
+}
+
+.book .book-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.book .book-title{
+    color: #6A5ACD;
+    height: 10%;
+    padding: 10px 0;
+}
+
+.book .book-price{
+    height: 7%;
+    padding-bottom: 5px;
 }
 
 div.fiction, div.business, div.bestselling{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    
+    grid-template-columns: repeat(4, 270px);  
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
+
+/* BookCategory and Book component styling ends */
 
 div h6.heading{
     font-family: "Inter", sans-serif;
@@ -553,50 +599,189 @@ p.bill, div.CounterContainer, p.Price, div.BookCover span{
     font-size: 14px;
 }
 
+/* footer component styling begins */
+
 footer{
+    width: 100%;
+    height: 70vh;
     background-color: hsl(248, 53%, 58%);
     color: hsl(0, 0%, 100%);
     font-family: "Inter", sans-serif;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: space-evenly;
+    padding: 40px;
+    gap: 20px;
 }
 
-footer div{
-    margin: 10px 20px 20px;
-    padding: 10px;
-}
-
-footer p.title{
-    width: 300px;
-    height: 36px;
-    margin: 0;
+footer h4.title{
     font-size: 30px;
     font-weight: 600;
-    display: inline-block;
 }
 
 footer p.Content{
+    font-size: 20px;
     font-weight: 500;
-    display: block;
+    margin: 20px 0;
 }
 
-footer div.SocialSection ul{
+.About div.SocialSection ul{
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    width: 150px;
-    height: 30px;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
 }
 
-footer div.SocialSection ul li img{
-    height: 30px;
-    margin: 0 2px;
+.About .SocialIcon{
+    width: 20px;
 }
 
-footer div.ButtonSection button{
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(248, 53%, 58%);
+.About .SocialIcon img{
+    width: 100%;
+}
+
+footer .ButtonSection button{
+    width: 100px;
     font-size: 15px;
     font-weight: 600;
+    color: hsl(248, 53%, 58%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 0;
 }
+
+footer .Contact{
+    display: grid;
+    justify-content: right;
+}
+
+/* footer component styling ends */
+
+
+/* media query begins */
+
+@media screen and (max-width: 480px) {
+    
+    input::placeholder{
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    /* header component styling begins */
+
+    header{
+        width: 100%;
+        height: 90px;
+    }
+
+    header div.logo {
+        font-size: 15px;
+    }
+
+    .HeaderLink li.Home a{
+        font-size: 10px;  
+    }
+
+    .HeaderLink li.SearchBox{
+        width: 50%;
+    }
+
+    .HeaderLink li.CartButton{
+        width: 20%;
+        height: 50%;
+        font-size: 10px;
+    }
+
+    /* header component styling begins */
+
+    /* ProductListing page styling begins  */
+
+    div.background{
+        width: 100%;
+        height: 70vh;
+    }
+
+    div.greetings h1{
+        font-size: 32px;
+    }
+
+    div.greetings p{
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 10px;
+    }
+
+    /* ProductListing page styling begins  */
+
+    /* BookCategory and Book component styling begins */
+
+    div.BookOptions{
+        width: 100%;
+    }
+
+    select{
+        width: 20%;
+    }
+
+    .BookOptions .book{
+        height: 250px;
+        font-size: 10px;
+    }
+
+    .BookOptions div h2{
+        font-size: 20px;
+    }
+
+    .BookOptions .book Button{
+        width: 70px;
+        font-size: 10px;
+    }
+
+    .book .book-title{
+        font-size: 12px;
+    }
+
+    div.fiction, div.business, div.bestselling{
+        grid-template-columns: repeat(2, 175px);  
+        gap: 40px;
+    }
+
+    /* BookCategory and Book component styling ends */
+
+    footer{
+        height: 90vh;
+        grid-template-columns: repeat(1, 350px);
+        justify-content: space-evenly;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    footer h4.title{
+        font-size: 18px;
+    }
+
+    footer p.Content{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .About div.SocialSection ul{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    footer .ButtonSection button{
+        width: 70px;
+        font-size: 10px;
+    }
+
+    footer .Contact{
+        display: flex;
+        justify-content: left;
+        gap: 20px;
+    }
+
+  }
+
+/* media query ends */

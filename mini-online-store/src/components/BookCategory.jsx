@@ -23,6 +23,9 @@ import zerotoone from "../assets/zerotoone.png"
 import fastlane from "../assets/fastlane.png"
 import gonegirl from "../assets/gonegirl.png"
 
+// dropdown-arrow
+import dropdown from "../assets/dropdown.png"
+
 
 function BookCategory(){
     return(
@@ -35,7 +38,7 @@ function BookCategory(){
                 <option value="bestselling">BESTSELLING</option>
             </select>
             <div className="books">
-                <h6>FICTION</h6>
+                <h2>FICTION</h2>
                 <div className="fiction">
                     <Book src={golden1} title="The Golden Age 1" price="4,000" />
                     <Book src={golden2} title="The Golden Age 2" price="5,000" />
@@ -47,7 +50,7 @@ function BookCategory(){
                     <Book src={fire} title="Fire Dance" price="4,000" />
                 </div>
                     
-                <h6>BUSINESS</h6>
+                <h2>BUSINESS</h2>
                 <div className="business">
                     <Book src={habitofsuccess} title="Habit of Success" price="4,000" />
                     <Book src={influence} title="How to win Friends" price="9,000" />
@@ -59,7 +62,7 @@ function BookCategory(){
                     <Book src={atomichabits} title="Atomic Habits" price="8,000" />
                 </div>
                 
-                <h6>BESTSELLING</h6>
+                <h2>BESTSELLING</h2>
                 <div className="bestselling">
                     <Book src={thinkandgrow} title="Think and Grow Rich" price="12,000" />
                     <Book src={zerotoone} title="Zero to One" price="12,000" />
