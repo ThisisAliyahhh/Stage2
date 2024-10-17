@@ -794,7 +794,7 @@ footer .Contact{
 
 /* media query begins */
 
-@media screen and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
     
     input::placeholder{
         padding: 10px;
