@@ -10,20 +10,20 @@ import { Link } from "react-router-dom";
 function CheckOut(){
     return(
         <>
-            <ShoppingCart />
             <div className="CustomerLogin">
+                <ShoppingCart />
                 <p>Returning Customer? <a href="#">Click here to Login</a></p>
             </div>
             <div className="Checkout">
                 <div className="BillingDetails">
-                    <h6 className="heading">BILLING DETAILS</h6>
+                    <h2 className="heading">BILLING DETAILS</h2>
                     <form>
                         <div className="Name">
-                            <div>
+                            <div className="First">
                                 <label htmlFor="FirstName">First name <span>*</span></label>
                                 <input type="text" id="FirstName" name="FirstName" required/><br />
                             </div>
-                            <div>
+                            <div className="Last">
                                 <label htmlFor="LastName">Last name <span>*</span></label>
                                 <input type="text" id="LastName" name="LastName" required/>
                             </div>
@@ -45,7 +45,7 @@ function CheckOut(){
                 </div>
 
                 <div className="Order">
-                    <h6 className="heading">YOUR ORDER</h6>
+                    <h2 className="heading">YOUR ORDER</h2>
                     <div className="Bills">
                         <p class="head">Product</p>
                         <p class="head">Subtotal</p>
@@ -63,7 +63,7 @@ function CheckOut(){
                         <p className="price">&#8358; 6,000</p>
                     </div>
                     
-                    <div>
+                    <div className="PayStackNote">
                         <p className="PayStack">PayStack</p>
                         <p className="Secure"><span className="Secured">Secured by</span> <span className="PayStack">Paystack</span></p>
                     </div>

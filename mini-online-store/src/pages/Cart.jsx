@@ -7,61 +7,80 @@ import { Link } from "react-router-dom";
 function Cart(){
     return(
         <>
-            <ShoppingCart />
-            <div className="Cart">
-                <div className="Products">
-                    <div className="Product">
-                        <h6 className="UserChioce">Product</h6>
-                        <h6 className="Price">Price</h6>
-                        <h6 className="Price">Quantity</h6>
-                        <h6 className="Price">Sub-total</h6>
+            <div className="Carts">
+                <ShoppingCart />
+                <div className="Cart">
+                    <div className="Products">
+                        <div className="ProductHead">
+                            <ul>
+                                <li className="UserChioce">Product</li>
+                                <li className="Price">Price</li>
+                                <li className="Quantity">Quantity</li>
+                                <li className="Price">Sub-total</li>
+                            </ul>
+                        </div>
 
-                        <div className="BookCover">
-                            <img className="CancelButton" src={Cancel} alt="Cancel button" />
-                            <img src={Golden} alt="book-cover" />
-                            <span>The Golden Age 2</span>
+                        <div className="Product">
+                            <ul>
+                                <li className="UserBook">
+                                    <div className="SelectBook">
+                                        <div className="CancelButton">
+                                            <img src={Cancel} alt="Cancel button" />
+                                        </div>
+                                        
+                                        <div className="BookCover">
+                                            <img src={Golden} alt="book-cover" />
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <span>The Golden Age 2</span>
+                                </li>
+                                <li className="Price">&#8358; 4,000</li>
+                                <li className="Quantity">
+                                    <div className="CounterContainer">
+                                        <div class="MinusButton">-</div>
+                                        <div class="number">1</div>
+                                        <div class="PlusButton">+</div>
+                                    </div>
+                                    
+                                </li>
+                                <li className="Price">&#8358; 4,000</li>
+                            </ul>
                         </div>
-                        <p className="Price">&#8358; 4,000</p>
-                        <div class="CounterContainer">
-                            <div class="MinusButton">-</div>
-                            <div class="number">1</div>
-                            <div class="PlusButton">+</div>
+                        
+                        
+                            
+                        <div className="Button">
+                            <div className="white">
+                                <Link to="/home"><Button ButtonName="Continue Shopping" /></Link>
+                            </div>
+                            <Button ButtonName="Share Cart"/>
                         </div>
-                        <p className="Price">&#8358; 4,000</p>
                     </div>
                     
-                        
-                    <div className="Button">
-                        <div className="white">
-                            <Link to="/home"><Button ButtonName="Continue Shopping" /></Link>
+                    <div className="CartTotal">
+                        <div className="CartHead">
+                            <p>Cart Totals</p>
                         </div>
-                        <Button ButtonName="Share Cart"/>
-                    </div>
-                </div>
-
-                <div className="VeritalLine"></div>
-                
-                <div className="CartTotal">
-                    <div className="CartHead">
-                        <h6>Cart Totals</h6>
-                    </div>
-                    <div className="CartItems">
-                        <div className="SubItems">
-                            <p className="detail">Sub-total</p>
-                            <p className="bill">&#8358; 4000</p>
-                        </div>
-                        <div className="SubItems">
-                            <p className="detail">Delivery</p>
-                            <p className="bill">&#8358; 2000</p>
-                        </div>
-                        <div className="SubItems">
-                            <p className="detail">Total</p>
-                            <p className="bill">&#8358; 6000</p>
+                        <div className="CartItems">
+                            <ul className="SubItems">
+                                <li className="detail">Sub-total</li>
+                                <li className="bill">&#8358; 4000</li>
+                            </ul>
+                            <ul className="SubItems">
+                                <li className="detail">Delivery</li>
+                                <li className="bill">&#8358; 2000</li>
+                            </ul>
+                            <ul className="SubItems">
+                                <li className="detail">Total</li>
+                                <li className="bill">&#8358; 6000</li>
+                            </ul>
                         </div>
                         <div className="Button">
                             <Link to="/checkout"><Button ButtonName="PROCEED TO CHECK-OUT"/></Link>
                         </div>
-                        
+                            
                     </div>
                 </div>
             </div>

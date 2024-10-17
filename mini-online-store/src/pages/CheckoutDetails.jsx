@@ -3,8 +3,8 @@ import Button from "../components/Button"
 function CheckoutDetails(){
     return(
         <>
-            <div>
-                <h6 className="heading">Check-Out Details</h6>
+            <div className="CheckOutDetails">
+                <h2 className="OrderHeading">Check-Out Details</h2>
                 <div className="OrderDetails">
                     <p>Order number: <span>89841</span></p>
                     <p>Date: <span>July 7, 2024</span></p>

@@ -3,7 +3,7 @@ function ShoppingCart(){
     return(
         <>
         <div className="ShoppingCart">
-            <h6 className="ShoppingCart"><a href="">Shopping Cart</a> &gt; <a href=""><span>Check Out</span></a></h6>
+            <h2><a href="#"><span className="ShoppingCart">Shopping Cart</span></a> <span className="greater">&gt;</span> <a href="#"><span className="CheckOut">Check Out</span></a></h2>
         </div>
         </>
     )

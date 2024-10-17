@@ -17,7 +17,6 @@ body{
 button, input, textarea {
     border: 1px solid #6a5bcd80;
     border-radius: 20px;
-    resize: none;
     padding: 5px;
 }
 
@@ -251,359 +250,489 @@ div.fiction, div.business, div.bestselling{
 
 /* BookCategory and Book component styling ends */
 
-div h6.heading{
+/* Cart page and ShoppingCart component styling begins */
+
+div.Carts{
+    width: 100%;
+    height: 70vh;
+}
+
+.Carts div.ShoppingCart{
+    text-align: center;
+}
+
+.Carts div.ShoppingCart a, div.ShoppingCart .greater{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 40px;
-    color: hsl(248, 53%, 58%);
-    margin: 10px auto;
+    color: #6A5ACD;
 }
 
-div.OrderDetails{
-    padding: 20px;
-    margin: 0 auto 40px;
+.Carts div.ShoppingCart span.CheckOut{
+    color: #99AAB5;
 }
 
-div.OrderDetails p{
+div.Cart{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
     font-family: "Inter", sans-serif;
+}
+
+.Cart span{
+    color: #97a9b4;
+}
+.Cart div.ShoppingCart span.greater{
+    color: #6a5bcd;
+}
+
+.Cart .Products{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 3px solid #6A5ACD80;
+    padding: 0 15px;
+}
+
+.Products .ProductHead{
+    width: 100%; 
+    height: 20%;
+}
+
+.ProductHead ul{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 4px solid #99AAB5;
+}
+
+
+.ProductHead li.UserChioce, .Product li.UserBook{
+    width: 40%;
+}
+
+.Price, .Quantity, .CounterContainer{
+    width: 20%;
+}
+
+.Products .Product{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #6A5ACD80;
+}
+
+.Product ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Product .UserBook{
+    height: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.UserBook .SelectBook{
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.UserBook img{
+    width: 100%;
+    height: 100%;
+}
+
+.UserBook .CancelButton{
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+}
+
+.UserBook .BookCover{
+    width: 82px;
+    height: 111px;
+    top: 17px;
+    left: 27px;
+    position: absolute;
+}
+
+.UserBook span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6A5ACD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Product .Price{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.Product .Quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Product .CounterContainer{
+    width: 53px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #AFA4DE;
+}
+
+.CounterContainer .MinusButton, .CounterContainer .PlusButton{
+    width: 17px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #AFA4DE;
+    background-color: #AFA4DE;
+}
+
+.CounterContainer .number{
+    width: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.Products .Button{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Products .Button Button{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.Products .white Button{
+    background-color: #FFFFFF;
+    color: #6A5ACD;
+}
+
+.Cart .CartTotal{
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.CartTotal .CartHead{
+    width: 100%; 
+    height: 20%;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.CartTotal .CartItems{
+    width: 100%;
+    height: 40%;
+}
+
+.CartItems .SubItems{
+    height: 33%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #99AAB5;
+}
+
+.SubItems .detail{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.SubItems .bill{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.CartTotal .Button{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CartTotal .Button Button{
+    width: 516px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+/* Cart page and ShoppingCart component styling ends */
+
+/* CheckOut page styling begins */
+
+h2.heading{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+div.CustomerLogin{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.CustomerLogin div.ShoppingCart{
+    text-align: center;
+}
+
+.CustomerLogin div.ShoppingCart a, div.ShoppingCart .greater{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #99AAB5;
+}
+
+.CustomerLogin div.ShoppingCart span.CheckOut{
+    color: #6A5ACD;
+}
+
+div.CustomerLogin a{
+    color: #6A5ACD;
+}
+
+div.Checkout{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.Checkout .BillingDetails{
+    width: 50%;
+    height: 100%;
+    padding: 20px 40px;
+    padding-left: 0;
+    border-top: 3px solid #99AAB5;
+}
+
+.BillingDetails .Name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.BillingDetails label{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.BillingDetails .Name span{
+    color: #6A5ACD;
+}
+
+.BillingDetails .First, .BillingDetails .Last{
+    width: 50%;
+}
+
+.BillingDetails input, textarea{
+    width: 100%;
+    margin: 10px 0;
+    background-color: #FFFFFF;
+}
+
+.BillingDetails textarea{
+    height: 126px;
+}
+
+.Checkout .Order{
+    width: 30%;
+    height: 75%;
+    border: 2px solid #6A5ACD;
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+
+.Checkout .Bills{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #99AAB5;
+    padding: 10px 0;
+}
+
+.Bills .head{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.Bills .sub, .Bills .golden{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.Bills .golden span{
+    font-weight: 400;
+
+}
+
+.Bills .price{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.Bills .golden{
+    color: #6A5ACD;
+}
+
+.Bills .golden span{
+    font-weight: 400;
+    color: #292F33;
+}
+
+.Checkout .PayStackNote{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.PayStackNote .PayStack{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.PayStackNote .Secure, .Order .note{
+    text-align: center;
+}
+
+.PayStackNote .Secured, .Order .note{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.Order .PaymentMethod{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.PaymentMethod ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #6A5ACD;
+}
+
+.Order Button{
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Order .Policy{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* CheckOut page styling ends */
+
+/* CheckOutDetails page styling begins */
+
+.CheckOutDetails {
+    width: 100%;
+    height: 75vh;
+    font-family: "Inter", sans-serif;
+    padding: 0 40px;
+}
+
+.CheckOutDetails .OrderHeading{
+    width: 100%;
+    height: 20%;
+    font-size: 40px;
+    font-weight: 600;
+    color: #6A5ACD;
+    text-align: center;
+}
+
+.CheckOutDetails .OrderDetails{
+    width: 80%;
+    height: 70%;
+}
+
+.OrderDetails p{
     font-weight: 400;
     font-size: 18px;
+    padding-bottom: 15px;
 
 }
 
-div.OrderDetails p span{
+.OrderDetails p span{
     font-weight: 500;
     font-size: 20px;
 }
 
 div.OrderDetails Button{
-    background-color: hsl(248, 53%, 58%);
-    color: hsl(0, 0%, 100%);
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #6a5bcd;
+    color: #ffffff;
     margin: 10px 0;
     padding: 10px 20px;
 }
 
-div.Checkout{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-div.CustomerLogin{
-    text-align: center;
-}
-
-div.CustomerLogin p{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-div.CustomerLogin p a{
-    color: hsl(248, 53%, 58%);
-}
-
-div.Checkout{
-    font-family: "Inter", sans-serif;
-}
-
-div.Checkout div.BillingDetails{
-    border-top: 3px solid hsl(204, 16%, 65%);
-    margin: 0 40px 40px;
-}
-
-div.BillingDetails h6.heading, div.Order h6.heading{
-    color: hsl(0, 0%, 0%);
-    font-weight: 600;
-    font-size: 14px;
-    text-align: left;
-}
-
-div.BillingDetails div.Name {
-    display: flex;
-    flex-direction: row;
-}
-
-div.BillingDetails div.Name span{
-    color: hsl(248, 53%, 58%);;
-}
-
-div.BillingDetails div.Name div input{
-    width: 297px;
-    margin-right: 5px;
-}
-
-div.BillingDetails label{
-    display: block;
-    margin: 10px 0 5px;
-    width: 300px;
-    font-size: 10px;
-    font-weight: 500;
-}
-
-div.BillingDetails input, div.BillingDetails textarea{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: hsla(0, 14%, 95%, 1);
-}
-
-div.BillingDetails textarea {
-    height: 100px;
-}
-
-div.Checkout div.Order{
-    border: 2px solid hsl(248, 53%, 58%);
-    border-radius: 20px;
-    margin: 0 40px 40px;
-    padding: 20px 40px;
-    height: 500px;
-    width: 300px;
-}
-
-
-div.Bills{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid hsl(203, 17%, 65%);
-    font-weight: 500;
-    font-size: 12px;
-    padding: 5px;
-}
-
-div.Bills p.head{
-    font-weight: 500;
-    font-size: 12px;
-}
-
-div.Bills p.price{
-    font-weight: 600;
-    font-size: 10px;
-}
-
-div.Bills p.golden{
-    font-weight: 500;
-    font-size: 12px;
-    color: hsl(248, 53%, 58%);
-}
-
-div.Bills p.sub{
-    font-weight: 500;
-    font-size: 10px;
-}
-
-div.Bills p.golden span{
-    color: black;
-    font-size: smaller;
-    font-size: 10px;
-    font-weight: 400;
-}
-
-div.Order .PayStack{
-    font-weight: 600;
-}
-
-div.Order p.Policy, p.note{
-    font-size: 10px;
-    font-weight: 500;
-}
-
-div.Order p.note{
-    text-align: center;
-}
-
-div.Order p.Secure{
-    margin: 0;
-    text-align: center;
-}
-
-div.Order span.Secured {
-    font-weight: 500;
-}
-
-div.Order Button{
-    width: 100%;
-}
-
-div.PaymentMethod{
-    background-color: hsl(0, 0%, 100%);
-    border: 2px solid hsl(203, 17%, 65%);
-    margin-top: 0;
-    height: 70px;
-}
-
-div.PaymentMethod ul{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-}
-
-div.PaymentMethod ul li{
-    width: 50px;
-    align-items: center;
-
-}
-
-div.Cart{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 30px;
-    padding: 20px 0;
-}
-
-div.ShoppingCart h6.ShoppingCart a, div.ShoppingCart h6.ShoppingCart {
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 40px;
-    color: hsl(248, 53%, 58%);
-}
-
-div.ShoppingCart h6{
-    justify-content: space-between;
-    margin: 50px 0 0 0;
-}
-
-div.ShoppingCart span{
-    color: hsla(204, 16%, 65%, 1);
-}
-
-div.Products{
-    margin: 0;
-}
-
-div.Product{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0 20px;
-}
-
-
-div.Product h6, div.CartHead h6{
-    text-align: left;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    padding-bottom: 10px;
-    border-bottom: 4px solid hsla(204, 16%, 65%, 1);
-    margin-bottom: 20px;
-}
-
-.Price{
-    padding-left: 20px;
-}
-
-div.BookCover{
-    position: relative;
-}
-h6.UserChioce, div.BookCover{
-    width: 230px;
-}
-div.BookCover img{
-    height: 111px;
-    width: 83px;
-    margin: 0 0 40px 10px;
-}
-div.BookCover img.CancelButton{
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    top: -15px;
-    left: -33px;
-}
-
-div.BookCover span{
-    color: hsl(248, 53%, 58%);
-    position: absolute;
-    top: 15px;
-    right: 2px;
-}
-
-div.CounterContainer {
-    display: flex;
-    justify-content: center;
-}
-
-div.number {
-    height: 32px;
-    width: 23px;
-    display: flex;
-    padding: 10px 0 0;
-    justify-content: center;
-    border: 1px solid hsl(0, 0%, 0%);
-    background-color: hsl(0, 0%, 100%);
-}
-
-div.MinusButton, div.PlusButton{
-    height: 32px;
-    width: 17px;
-    display: flex;
-    padding: 10px 0 0;
-    justify-content: center;
-    border: 1px solid hsl(0, 0%, 0%);
-    background-color: hsl(251, 47%, 76%);
-}
-
-div.MinusButton{
-    border-right: none;
-}
-
-div.PlusButton{
-    border-left: none;
-}
-
-div.Button{
-    margin: 20px 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-div.Button button{
-    font-size: 24px;
-    font-weight: 600;
-    padding: 10px;
-}
-
-div.VeritalLine{
-    border-left: 3px solid hsla(248, 53%, 58%, 0.5);
-}
-
-div.Products div.Button div.white Button{
-    background-color: white;
-    color: hsl(248, 53%, 58%);
-}
-
-div.CartTotal{
-    margin: 0 10px;
-    padding: 0 10px;
-}
-
-div.CartTotal div.Button button{
-    height: 49px;
-    width: 516px;
-}
-
-div.CartHead h6{
-    border: none;
-}
-
-div.CartItems div.SubItems{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid hsl(204, 16%, 65%);
-}
-
-p.detail{
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-p.bill, div.CounterContainer, p.Price, div.BookCover span{
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-}
+/* CheckOutDetails page styling ends */
 
 /* footer component styling begins */
 
@@ -754,6 +883,222 @@ footer .Contact{
     }
 
     /* BookCategory and Book component styling ends */
+
+    /* Cart page and ShoppingCart component styling begins */
+
+    div.Carts{
+        width: 100%;
+        height: 150vh;
+    }
+
+    .Carts div.ShoppingCart a, div.ShoppingCart .greater {
+        width: 100%;
+        font-size: 24px;
+        color: #6a5bcd;
+    }
+
+    .Carts div.ShoppingCart span.greater, .Carts div.ShoppingCart span.CheckOut{
+        display: none;
+    }
+
+    div.Cart{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Cart .Products{
+        width: 100%;
+        height: 50%;
+        padding: 0 15px;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .Products .ProductHead{
+        height: 20%;
+    }
+
+    .ProductHead ul{
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .ProductHead li.UserChioce, .Product li.UserBook{
+        width: 50%;
+    }
+
+    .Quantity{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ProductHead .Price, .Product .Price{
+        display: none;
+    }
+
+    .Products .Product{
+        width: 100%;
+        height: 50%;
+    }
+
+    .Product ul{
+        height: 100%;
+    }
+
+    .Product .UserBook{
+        height: 100%;
+        display: flex;
+        gap: 10px;
+        padding-top: 5px;
+    }
+
+    .UserBook img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .UserBook .CancelButton{
+        width: 24px;
+        height: 23px;
+        z-index: 10;
+    }
+
+    .UserBook .BookCover{
+        width: 82px;
+        height: 101px;
+        top: 10px;
+        left: 20px;
+        position: absolute;
+    }
+
+    .UserBook span{
+        font-size: 12px;
+    }
+
+    .Products .Button Button{
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 10px;
+    }
+
+    .Cart .CartTotal{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        padding: 0 15px;
+    }
+    
+    .CartTotal .CartHead{
+        font-size: 24px;
+        justify-content: center;
+        border-bottom: 2px solid  #99AAB5;
+    }
+
+    .SubItems .detail{
+        font-size: 12px;
+    }
+    
+    .SubItems .bill{
+        font-size: 10px;
+    }
+
+    .CartTotal .Button Button{
+        width: 388px;
+        font-size: 14px;
+    }
+
+    /* Cart page and ShoppingCart component styling ends */
+
+    /* CheckOut page styling begins */
+
+    .CustomerLogin div.ShoppingCart a, div.ShoppingCart .greater {
+        width: 100%;
+        font-size: 24px;
+        color: #6a5bcd;
+    }
+    
+    .CustomerLogin div.ShoppingCart span.greater, .CustomerLogin div.ShoppingCart span.ShoppingCart{
+        display: none;
+    }    
+
+    h2.heading{
+        font-size: 12px;
+    }
+    
+    div.CustomerLogin{
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 10px;
+        margin: 20px 0;
+    }
+
+    div.Checkout{
+        width: 100%;
+        height: 290vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .Checkout .BillingDetails{
+        width: 100%;
+        height: 50%;
+    }
+
+    .BillingDetails .Name{
+        flex-direction: column;
+    }
+
+    .BillingDetails .First, .BillingDetails .Last{
+        width: 100%;
+    }
+
+    .Checkout .Order{
+        width: 90%;
+        height: 37%;
+        border: 2px solid #6A5ACD;
+        border-radius: 20px;
+        padding: 20px 40px;
+    }
+
+    /* CheckOut page styling ends */
+
+    /* CheckOutDetails page styling begins */
+
+    .CheckOutDetails {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .CheckOutDetails .OrderHeading{
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .OrderDetails p{
+        font-size: 14px;
+    
+    }
+    
+    .OrderDetails p span{
+        font-size: 14px;
+    }
+
+    div.OrderDetails Button{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* CheckOutDetails page styling ends */
 
     footer{
         height: 100vh;
